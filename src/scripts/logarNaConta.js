@@ -15,7 +15,11 @@ module.exports = {
     const VerifyUser = await db.all(`SELECT * FROM login`);
     VerifyUser.forEach((row) => {
       if (row.user == username && row.password == password) {
-        res.render("perfil", { username: username });
+        if (row.user == 'administrador' || row.password == 'administrador') {
+          res.render('Dashboard', {users: VerifyUser.length})
+        } else{
+          res.render("perfil", { username: username });
+        }
       }
     });
   },
