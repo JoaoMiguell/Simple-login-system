@@ -9,10 +9,35 @@
 </head>
 <body>
     <div class="content">
-        <h2>Ola João</h2>
-        <section>
+        <h2 class="h2">Ola João</h2>
+        <section class="infoGeral">
             <h3>Informações gerais</h3>
-            <p>Ha um total de <%= users %> usuarios cadatrados</p>
+            <p class="p">Ha um total de <%= users %> usuarios cadatrados</p>
+        </section>
+        <section class="listUsers">
+
+            <table class="infoUsers">
+                <tr>
+                    <th class="tabela-all border">Username</th>
+                    <th class="tabela-all border">Password</th>
+                </tr>
+                <% infoUsers.forEach((user) => { %>
+                    <tr>
+                        <td class="tabela-all l"><%= user.user %></td>
+                        <td class="tabela-all r"><%= user.password %></td>
+                        <td><a href="#abrirModal" class="link">Open Modal</a>
+
+                            <div id="abrirModal" class="modal">
+                                <h2 class="h2">Excluir conta</h2>
+                                <p class="p">Você deseja realmente exluir essa conta?</p>
+                                
+                                <a href="#fechar" title="Fechar" class="button">Cancelar</a>
+                            </div>
+                        </td>
+                    </tr>
+                <% }); %> 
+            </table>
+
         </section>
     </div>
 </body>

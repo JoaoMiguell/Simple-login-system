@@ -7,6 +7,20 @@
     font-size: 62.5%;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background:#333;
+}
+     
+ 
+::-webkit-scrollbar-thumb {
+    background: #1a1a1a;
+}
+
 html, body {
     height: 100vh;
     width: 100vw;
@@ -17,20 +31,96 @@ body {
     color: white;
 }
 
-.content h2 {
+.h2 {
     font-size: 2.5rem;
     padding: 3rem 0 3rem 6rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-section h3 {
+.infoGeral h3 {
     font-size: 2.3rem;
     padding: 0 0 1.5rem 6rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-section p {
+.p {
     font-size: 2.0rem;
     padding: 0 0 0 6rem;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.listUsers {
+    background: rgb(78, 78, 78);
+    border: 1px solid #000000;
+    margin: 5rem 6rem 0 6rem;
+
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.infoUsers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-collapse: collapse;
+
+
+    font-size: 7.0rem;
+}
+
+.tabela-all.border {
+    border: 2px solid #ffffff;
+    padding: .5rem;
+}
+
+.tabela-all.l {
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    padding: 1rem;
+}
+
+.tabela-all.r {
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    padding: 1rem;
+}
+
+.link {
+    color: #fff;
+}
+
+.modal {
+    position: fixed;
+    top: 20vh;
+    left: 25vw;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+
+    width: 60rem;
+    height: 40rem;
+
+    border-radius: 8px;
+  }
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 15px 20px;
+    background: #fff;
+}
+
+.button {
+    color: #ffffff;
 }

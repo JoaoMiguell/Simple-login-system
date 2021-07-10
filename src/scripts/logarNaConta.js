@@ -16,7 +16,7 @@ module.exports = {
     VerifyUser.forEach((row) => {
       if (row.user == username && row.password == password) {
         if (row.user == 'administrador' || row.password == 'administrador') {
-          res.render('Dashboard', {users: VerifyUser.length})
+          res.render('Dashboard', {users: VerifyUser.length, infoUsers: VerifyUser})
         } else{
           res.render("perfil", { username: username });
         }
