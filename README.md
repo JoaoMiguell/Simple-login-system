@@ -1,5 +1,5 @@
-# SistemLogin
-Sistema de login usando EJS, node,espress,JavaScript,Sqlite
+# Simple login system
+Sistema de login usando EJS,Node,Express,JavaScript e Sqlite.
 
 *Um sistema desenvolvido para estudo
 
